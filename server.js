@@ -68,7 +68,12 @@ app.get("/scrape", function(req,res){
     res.send("Scrape Complete")
 });
 
-})
+});
+app.get("/articles", function(req, res) {
+       db.Article.find({}, function(err,data){
+      res.json(data)
+    })
+  });
 
 app.listen(3000, function() {
     console.log("App running on port 3000!");
