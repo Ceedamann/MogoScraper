@@ -89,6 +89,14 @@ app.get("/deals", function(req, res) {
           res.json(data);
       })
   });
+  app.get("/delete/:id", function(req, res){
+      db.Article.deleteOne({_id:req.params.id}, function(err, removed){
+          console.log(removed);
+          res.send(removed);
+         
+          
+      })
+  })
 
 app.listen(3000, function() {
     console.log("App running on port 3000!");
