@@ -7,4 +7,94 @@
 img {
     width: 200px;
     height: 200px;
+    border-bottom: 3px solid black;
+
+}
+
+.jumbotron {
+    text-align: center;
+    background: honeydew;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+p {
+    font-family: 'Special Elite', cursive;
+}
+
+button {
+    font-family: 'Mansalva', cursive;
+}
+
+a {
+    font-family: 'Mansalva', cursive;
+    justify-content: center;
+}
+
+body {
+    background: rgb(0, 0, 0);
+}
+
+#link {
+    display: block;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    60%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+#title:hover {
+    animation: bounce 1s;
+}
+
+#link:hover {
+    animation: bounce 1s;
+}
+
+h1:hover {
+    transform: skew(-10deg);
+}
+
+.card figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.card figure:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.modal-content{
+background: black;
+}
+
+.modal-title{
+    font-family: 'Special Elite', cursive;
+    color: ghostwhite;
+}
+
+.form-group{
+    font-family: 'Shadows Into Light Two', cursive;
 }

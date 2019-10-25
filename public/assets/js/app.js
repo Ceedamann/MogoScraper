@@ -8,21 +8,24 @@ $.getJSON("/deals", function (data) {
     var img = $("<img>");
     img.addClass("card-img-top");
     img.attr("src", data[i].img);
+    img.attr("id","img")
     var div2 = $("<div>");
     div2.addClass("card-body");
     var title = $("<p>");
     title.addClass("card-title");
     title.attr('data-id', data[i]._id);
     title.text(data[i].title);
+    title.attr("id","title")
     var link = $("<a>");
     link.attr("target", "_blank")
     link.attr("href", deals);
     link.addClass("btn btn-primary");
     link.text("See Deal");
+    link.attr("id","link");
+    var figure = $("<figure>")
 
-
-
-    div.append(img);
+    figure.append(img)
+    div.append(figure);
     div2.append(title);
     div2.append(link);
     div.append(div2);
