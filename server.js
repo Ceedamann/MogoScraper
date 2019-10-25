@@ -69,10 +69,25 @@ app.get("/scrape", function(req,res){
 });
 
 });
-app.get("/articles", function(req, res) {
+app.get("/deals", function(req, res) {
        db.Article.find({}, function(err,data){
       res.json(data)
     })
+  });
+  app.get("/deals/:id", function(req,res){
+      db.Article.findOne({_id:req.params.id})
+      .populate('note')
+      .then(function(data){
+          res.json(data)
+      })
+  });
+  app.post("/deals/:id", function(req,res){
+      db.Note.create(req.body)
+      .then(function(data){
+          return db.Article.findOneAndUpdate({_id: req.params.id},{note: data._id}, {new: true})
+      }).then(function(data){
+          res.json(data);
+      })
   });
 
 app.listen(3000, function() {
