@@ -26,6 +26,7 @@ p {
 
 button {
     font-family: 'Mansalva', cursive;
+    margin-left: 25px;
 }
 
 a {
@@ -37,9 +38,9 @@ body {
     background: rgb(0, 0, 0);
 }
 
-#link {
+/* #link {
     display: block;
-}
+} */
 
 @keyframes bounce {
 
