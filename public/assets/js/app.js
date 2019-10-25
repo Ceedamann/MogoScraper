@@ -23,11 +23,20 @@ $.getJSON("/deals", function (data) {
     link.text("See Deal");
     link.attr("id","link");
     var figure = $("<figure>")
+    var remove = $("<button>")
+    remove.addClass("btn btn-danger")
+    remove.attr("id","remove");
+    remove.attr('data-id', data[i]._id)
+    var icon = $("<i>")
+    icon.addClass("far fa-trash-alt");
+    remove.append(icon);
+
 
     figure.append(img)
     div.append(figure);
     div2.append(title);
     div2.append(link);
+    div2.append(remove);
     div.append(div2);
     col.append(div);
     $("#deals").prepend(col);
@@ -110,3 +119,16 @@ $(document).on("click", "#savenote", function () {
   $("#titleinput").val("");
   $("#bodyinput").val("");
 });
+
+$(document).on("click", "#remove", function(){
+  
+    var thisId = $(this).attr("data-id");
+    $.ajax({
+      method: "GET",
+      url: "/delete/" + thisId
+    }).then(function(data){
+      location.reload();
+      
+      
+    })
+})
