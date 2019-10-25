@@ -103,6 +103,9 @@ background: black;
 #scrape{
     float: right;
 }
+#delete{
+    float: right;
+}
 .jumbotron{
     background: rgba(192, 221, 201, 0.733);
 }

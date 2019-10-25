@@ -138,5 +138,14 @@ $("#scrape").on("click", function(){
     url: "/scrape"
 }).then(function(){
   location.reload();
-})
+});
+});
+
+$("#delete").on("click", function(){
+  $.ajax({
+    method:"GET",
+    url:"/delete"
+  }).then(function(){
+    location.reload();
+  });
 });

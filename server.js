@@ -98,6 +98,14 @@ app.get("/deals", function(req, res) {
           
       })
   })
+  app.get("/delete", function(req, res){
+      db.Article.deleteMany({}, function(err, removed){
+          console.log(removed);
+          res.send(removed);
+         
+          
+      })
+  })
 
 app.listen(process.env.PORT || 3000, function() {
     console.log("App running on port 3000!");
