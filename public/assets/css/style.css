@@ -11,9 +11,9 @@ img {
 
 }
 
-.jumbotron {
+h1 {
     text-align: center;
-    background: honeydew;
+   
 }
 
 h1 {
@@ -98,4 +98,11 @@ background: black;
 
 .form-group{
     font-family: 'Shadows Into Light Two', cursive;
+}
+
+#scrape{
+    float: right;
+}
+.jumbotron{
+    background: rgba(192, 221, 201, 0.733);
 }

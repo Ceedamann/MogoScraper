@@ -131,4 +131,12 @@ $(document).on("click", "#remove", function(){
       
       
     })
+});
+$("#scrape").on("click", function(){
+  $.ajax({
+    method: "GET",
+    url: "/scrape"
+}).then(function(){
+  location.reload();
 })
+});
